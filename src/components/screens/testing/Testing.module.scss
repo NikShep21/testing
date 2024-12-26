@@ -1,0 +1,77 @@
+.mainContainer{
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 4px 20px rgb(199, 199, 199);
+    margin-top: 5%;
+    padding: 25px;
+    border-radius: 15px;
+    
+    .questionBlocks{
+        display: flex;
+        gap: 5px;
+        .block{
+            height: 20px;
+            width: 20px;
+            border-radius: 7px;
+            border: 1px solid black;
+        }
+        .activeBlock{
+            height: 20px;
+            width: 20px;
+            border-radius: 7px;
+            background-color: red;
+        }
+        .currentBlock{
+            height: 20px;
+            width: 20px;
+            border-radius: 7px;
+            border: 1px solid red;
+        }
+    
+    }
+    .question{
+        font-size: 42px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .imageSignContainer{
+        margin-top: 20px;
+        text-align: center;
+        .imageSign{
+            
+            max-width: 300px;
+        }
+    }
+    .answers{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 0px 30px;
+    }
+    .answerBlock{
+
+       text-align: start;
+       padding: 10px 30px;
+        border: 1px solid black;
+        font-size: 24px;
+        transition: all 0.15s;
+        border-radius: 5px;
+        &:hover{
+            border: 1px solid red;
+        }
+    }
+    .answerBlockActive{
+        background-color: red;
+        color: white;
+        border: 1px solid red;
+    }
+    .buttonsChangeQuestion{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+   
+   
+}

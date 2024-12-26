@@ -1,0 +1,14 @@
+.button{
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 24px;
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    transition: all 0.15s;
+   &:hover{
+    opacity: 0.6;
+   }
+}
