@@ -12,3 +12,11 @@
     opacity: 0.6;
    }
 }
+@media (max-width:568px) {
+    .button{
+
+        width: 115px;
+        height: 55px;
+        font-size: 19px;
+    }
+}
