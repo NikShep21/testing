@@ -4,6 +4,7 @@ import styles from "./Modal.module.scss";
 import Button from "@/components/ui/button/Button";
 import { dataTest } from "@/data/data";
 import BlockQuestion from "@/components/ui/blockQuestion/BlockQuestion";
+import ColorRightUnswers from "@/components/ui/colorRightUnswers/ColorRightUnswers";
 interface Props {
   isOpen: boolean;
   dataUnswers: (number | null)[];
@@ -42,13 +43,14 @@ const Modal = ({ changeModal, isOpen, dataUnswers }: Props) => {
           <div className={styles.resultsHeader}>Результаты теста</div>
           <div className={styles.questionsContainer}>
             {dataTest.map((elem, id) => (
-              <BlockQuestion isRight={elem.rightAnswer === dataUnswers[id]}>
+              <BlockQuestion key={id} className={styles.isQuestion} isRight={elem.rightAnswer === dataUnswers[id]}>
                 задание {id + 1}
               </BlockQuestion>
             ))}
           </div>
           <div className={styles.conclusion}>
-            Решено верно {countRightUnswers} из {dataUnswers.length}
+            <p className={styles.baseConclusion}>Решено верно</p><ColorRightUnswers point={countRightUnswers} allPoint={dataUnswers.length}/>
+            
           </div>
           <div className={styles.buttonContainer}>
             <Button onClick={changeModal}>Назад</Button>

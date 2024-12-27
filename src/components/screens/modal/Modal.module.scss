@@ -13,20 +13,25 @@
 }
 .modalContainer {
   background-color: white;
-
+  overflow-y: auto; /* Включите вертикальный скроллинг */
   max-width: 960px;
-    padding: 40px 50px;
+    padding: 40px 10px;
   border-radius: 7px;
   box-shadow: 5px 4px 10px rgb(177, 176, 176);
+  
   .question {
     font-size: 28px;
     text-align: center;
   }
   .buttonContainer {
+    margin: 0 auto;
     margin-top: 40px;
     display: flex;
     gap: 30px;
     justify-content: space-between;
+    max-width: 860px;
+    
+   
   }
   .resultsHeader {
     text-align: center;
@@ -39,11 +44,37 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-
+    
   }
+  
   .conclusion{
+    
+    
+   
     font-size: 28px;
     text-align: center;
     margin-top: 40px;
+    padding: 5px;
+    .baseConclusion{
+      display: inline;
+      margin-right: 10px;
+    }
+  }
+}
+@media (max-width:768px) {
+  
+  .modalContainer{
+    max-width: 90vw;
+    .isQuestion{
+
+      width: 110px;
+      padding: 7px 0px;
+  
+      font-size: 16px;
+      
+    }
+    .questionsContainer{
+      gap: 10px;
+    }
   }
 }

@@ -1,5 +1,5 @@
 interface TypeDataTest{
-    image:string,
+    image:string | undefined,
     answer:string[],
     rightAnswer:number,
     question:string
@@ -95,7 +95,7 @@ export const dataTest:TypeDataTest[] = [
     },
     {
         question: 'Что необходимо сделать в первую очередь при обнаружении утечки газа в фудкорте?',
-        image:'',
+        image: undefined,
         answer:[
             'Попытаться выяснить источник утечки',
             'Сообщить о проблеме администрации или охране',
@@ -106,7 +106,7 @@ export const dataTest:TypeDataTest[] = [
     },
     {
         question: 'При возникновении паники в фудкорте, лучше всего оставаться на месте и не двигаться.',
-        image:'',
+        image: undefined,
         answer:[
             'Верно',
             'Неверно'
@@ -115,7 +115,7 @@ export const dataTest:TypeDataTest[] = [
     },
     {
         question: 'Если вы оказались в фудкорте во время пожара, необходимо _____________.',
-        image:'',
+        image: undefined,
         answer:[
             'Скрыться в укрытии',
             'Позвонить в пожарную службу',
@@ -126,7 +126,7 @@ export const dataTest:TypeDataTest[] = [
     },
     {
         question: 'При возникновении ситуации с массовым скоплением людей в фудкорте, необходимо _____________.',
-        image:'',
+        image: undefined,
         answer:[
             'Двигаться в сторону выхода',
             'Оставаться на месте и ждать помощи',
